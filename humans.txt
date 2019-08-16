@@ -3,11 +3,9 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Name: Saptarshi Majumdar
 
 # THANKS
-
-    <name>
 
 # TECHNOLOGY COLOPHON
 
