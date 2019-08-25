@@ -1,115 +1,219 @@
+/* general */
 body {
-    padding: 0;
-    margin: 0;
-}
-
-.head {
-    background: white;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.logo {
-    border-right: solid;
-    padding: 15px;
-    float: left;
-}
-
-.links {
-    float: right;
-    margin-top: 20px;
-}
-
-.art {
-    width: 30%;
-    text-align: justify;
-    margin-left: 25px;
-}
-
-.hero .ft {
-    width: 100%;
     margin: 0;
     padding: 0;
-}
-
-.hero>img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.title {
-    text-align: center;
-}
-
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-    width: 60%;
-}
-
-.links li {
-    display: inline;
-    font-size: 20px;
-    text-align: center;
-}
-
-nav li+li:before {
-    content: "|";
-    padding: 0 40px 0 5px;
-    margin: 0;
-}
-
-.links a {
-    color: black;
-    text-decoration: none;
-}
-
-.links a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.links a:hover {
-    color: black;
-    text-decoration: underline;
-}
-
-.links a:active {
-    color: grey;
-    text-decoration: underline;
-}
-
-.flex-container {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    font-family: 'Indie Flower', cursive;
 }
-
-.left {
-    width: 50%;
+.caps{
+    text-align: justify;
+    text-transform: capitalize;
 }
-
+.upper{
+    text-align: justify;
+    text-transform: uppercase;
+}
+.center{
+    text-align: center;
+}
 .just {
     text-align: justify;
 }
-
-.l {
-    width: 20px;
+main {
+    position: relative;
+    top: 41px;
+    flex: 1;
 }
 
-h1 {
-    font-family: 'Calligraffitti', cursive;
-    font-size: 40px;
-}
-
+/* nav-bar */
 .head {
+    background: deepskyblue;
+    color: white;
+    width: 100%;
+    height: auto;
     position: fixed;
     top: 0;
-    bottom: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.logo {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 5px;
+    float: left;
+}
+.logo img{
+    height: 60px;
+    width: 60px;
+    padding-right: 20px;
+}
+.links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.links li {
+    display: inline;
+    font-size: 20px;
+}
+.links a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+.links a:hover {
+    color: grey;
+}
+.nav-rule {
+    border: 0px;
+}
+
+/* hero section */
+.hero {
+    background: url('../img/chef.png') center center no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+.hero-text {
+    position: absolute;
+    top: 170px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    width: 35%;
+    color: navy;
+    text-shadow: 2px 2px deepskyblue;
+}
+
+/* 3-col section */
+.prod{
+    width: 30%;
+}
+.art-img {
+    display: block;
+    width: 60%;
+    margin: auto;
+    height: auto;
+    border-radius: 50%;
+}
+.col-3 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 0;
+}
+
+/* 2-col section */
+.col-2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: initial;
+}
+.about-content {
+    width: 40%;
+}
+
+/* footer */
+.footer{
+    margin: 80px 0 0 0;
+    background: deepskyblue;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: initial;
+}
+.footer h1{
+    padding: 0;
     margin: 0;
+}
+.footer-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.footer-content img {
+    height: 60px;
+    width: 60px;
+    padding-right: 20px;
+}
+.social {
+    padding: 0;
+}
+.social li {
+    display: inline;
+    padding: 0 20px 0 0;
+}
+.social img{
+    height: 25px;
+    width: 25px;
+}
+
+/* media queries */
+@media all and (max-width: 1000px) {
+    main {
+        position: relative;
+        top: 190px;
+    }
+
+    /*nav-bar*/
+    .head {
+        flex-flow: column wrap;
+    }
+    .logo {
+        margin: 0;
+    }
+    .links {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .nav-rule {
+        border: 1px solid #fff;
+        width: 100%;
+    }
+
+    /* hero unit */
+    .hero-text {
+        font-size: 8px;
+        visibility: hidden;
+    }
+
+    /* 3-col */
+    .col-3 {
+        flex-flow: column wrap;
+    }
+    .prod {
+        width: 80%;
+    }
+
+    /* 2-col */
+    .col-2 {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .about-content {
+        width: 80%;
+    }
+
+    /* footer */
+    .footer {
+        margin: 220px 0 0 0;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 }
